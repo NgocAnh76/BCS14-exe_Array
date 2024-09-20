@@ -83,21 +83,21 @@ function position() {
     "#txtChangePos"
   ).innerHTML = `Mảng sau khi đổi là: ${number}`;
 }
-// sắp xếp tăng dần
-// let numberCp = [];
-// for (let value of number) {
-//   numberCp.push(value);
-// }
-// console.log(number);
-// console.log(numberCp);
 function arrange() {
-  number.sort(function (a, b) {
+  // sắp xếp tăng dần
+  let numberCp = [];
+  for (let value of number) {
+    numberCp.push(value);
+  }
+  // console.log(number);
+
+  numberCp.sort(function (a, b) {
     return a - b;
   });
 
   document.querySelector(
     "#txtIncrease"
-  ).innerHTML = `Mảng sau khi sắp xếp: ${number}`;
+  ).innerHTML = `Mảng sau khi sắp xếp: ${numberCp}`;
 }
 
 // Tìm số nguyên tố đầu tiên
